@@ -10,13 +10,13 @@ android {
     defaultConfig {
         applicationId = "com.example.sprint22_runtime_permission_fragment"
         minSdk = 29
-        targetSdk = 33
+        targetSdk = 31
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
     }
 
@@ -39,10 +39,14 @@ android {
 }
 
 dependencies {
+    implementation("io.reactivex.rxjava3:rxandroid:3.0.2")
+    implementation("io.reactivex.rxjava3:rxjava:3.1.5")
+
+    implementation("com.github.tbruyelle:rxpermissions:0.12")
+    implementation("com.markodevcic:peko:3.0.4")
     implementation("androidx.fragment:fragment-ktx:1.6.2")
     implementation("androidx.activity:activity-ktx:1.8.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4")
-
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
